@@ -35,7 +35,7 @@ abstract class ValueObject extends Immutable implements JsonSerializable
         return $object;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed
     {
         $vars = get_object_vars($this);
         unset($vars['__INITIALIZED__']);
